@@ -66,7 +66,7 @@ namespace ImpalaFarming.Controllers
         }
 
         // GET: Account/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Update(int id)
         {
             return View();
         }
@@ -74,13 +74,13 @@ namespace ImpalaFarming.Controllers
         // POST: Account/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Update(int id, User user)
         {
             try
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details));
             }
             catch
             {
@@ -97,18 +97,56 @@ namespace ImpalaFarming.Controllers
         // POST: Account/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, User user)
         {
             try
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Logout));
             }
             catch
             {
                 return View();
             }
         }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(User user)
+        {
+            try
+            {
+                return RedirectToAction("Shop", "Product");
+            }
+            catch (Exception)
+            {
+                return View();
+            }
+        }
+
+        public ActionResult ResetPassword(int id)
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ResetPassword(int id,User user)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Login));
+            }
+            catch (Exception)
+            {
+                return View();
+            }
+        }
+
+
     }
 }
