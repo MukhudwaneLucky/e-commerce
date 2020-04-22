@@ -12,6 +12,8 @@ namespace ImpalaFarming.Models
         public string last_name { get; set; }
         [Display(Name = "Street Name")]
         public string street_name { get; set; }
+        [Display(Name = "Town")]
+        public string town { get; set; }
         [Display(Name = "City")]
         public string city { get; set; }
         [Display(Name = "Zip/Area/Postal Code")]
@@ -28,5 +30,7 @@ namespace ImpalaFarming.Models
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
         public string phone_number { get; set; }
+        [Display(Name = "User Type")]
+        public string user_type { get; set; }
     }
 }

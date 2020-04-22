@@ -74,12 +74,14 @@ namespace ImpalaFarming.Migrations
                     first_name = table.Column<string>(nullable: true),
                     last_name = table.Column<string>(nullable: true),
                     street_name = table.Column<string>(nullable: true),
+                    town = table.Column<string>(nullable: true),
                     city = table.Column<string>(nullable: true),
                     zip_code = table.Column<int>(nullable: false),
                     province = table.Column<string>(nullable: true),
                     email = table.Column<string>(nullable: true),
                     password = table.Column<string>(nullable: true),
-                    phone_number = table.Column<string>(nullable: true)
+                    phone_number = table.Column<string>(nullable: true),
+                    user_type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

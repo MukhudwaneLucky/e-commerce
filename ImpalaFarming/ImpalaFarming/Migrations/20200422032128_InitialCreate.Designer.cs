@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ImpalaFarming.Migrations
 {
     [DbContext(typeof(ImpalaFarmingDB))]
-    [Migration("20200422005738_InitialCreate")]
+    [Migration("20200422032128_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -176,6 +176,12 @@ namespace ImpalaFarming.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("street_name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("town")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("user_type")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("zip_code")

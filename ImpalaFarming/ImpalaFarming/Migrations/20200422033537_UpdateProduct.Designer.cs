@@ -3,14 +3,16 @@ using System;
 using ImpalaFarming.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ImpalaFarming.Migrations
 {
     [DbContext(typeof(ImpalaFarmingDB))]
-    partial class ImpalaFarmingDBModelSnapshot : ModelSnapshot
+    [Migration("20200422033537_UpdateProduct")]
+    partial class UpdateProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

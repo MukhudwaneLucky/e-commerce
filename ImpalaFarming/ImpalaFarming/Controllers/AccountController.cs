@@ -44,17 +44,19 @@ namespace ImpalaFarming.Controllers
                         first_name = user.first_name,
                         last_name = user.last_name,
                         street_name = user.street_name,
+                        town = user.town,
                         city = user.city,
                         zip_code = user.zip_code,
                         province = user.province,
                         email = user.email,
                         password = user.password,
-                        phone_number = user.phone_number
+                        phone_number = user.phone_number,
+                        user_type = "CUSTOMER"
                     });
                     db.SaveChanges();
 
                 }
-                catch (Exception) { return RedirectToAction("Index", "Home"); }
+                catch (Exception ex) { ViewBag.Error = "Exc : " + ex.GetBaseException() + ex.InnerException + ex.Message;  return View(); }
                 return RedirectToAction(nameof(Index));
             }
             catch

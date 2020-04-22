@@ -13,6 +13,7 @@ namespace ImpalaFarming.Models
         public int available_in_stock { get; set; }
         [Display(Name = "Price")]
         public double price { get; set; }
+        public string image_url { get; set; }
 
     }
 }
