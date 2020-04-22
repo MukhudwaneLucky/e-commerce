@@ -14,6 +14,7 @@ namespace ImpalaFarming.Models
         [Display(Name = "Total Price")]
         public double total_price { get; set; }
         [DataType(DataType.DateTime)]
+        [Display(Name = "Date Created")]
         public DateTime date_created { get; set; }
         [ForeignKey("User")]
         public int user_id { get; set; }
